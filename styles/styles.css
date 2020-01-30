@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: aliceblue;
+    margin: 0;
+    font-family: 'Catamaran', sans-serif;
+}
+
+                            /* Navigatie */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+}
+
+header a img {
+    width: 5em;
+    padding: .6em 1em;
+}
+
+nav ul {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    padding: 1em 0 1em 1em;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li a:hover {
+    color: black;
+    border: dashed .1em navy;
+    padding: .5em;
+}
+
+ul li a:focus {
+    color: black;
+    border: dashed .1em navy;
+    padding: .5em;
+}
+
+                            /* Zoeken */
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1em;
+    transition: 2s;
+    padding: 0 0 0 1em;
+}
+
+input[type="text"] {
+    width: 4em;
+    background-color: transparent;
+    border: 3px solid navy;
+    box-shadow: none;
+}
+
+input[type="text"]:hover {
+    display: flex;
+    justify-content: flex-start;
+    transition: 2s;
+    width: 12em;
+}
+
+input[type="text"]:focus {
+    display: flex;
+    justify-content: flex-start;
+    transition: 2s;
+    width: 12em;
+}
+
+button {
+    background-color: transparent;
+    color: black;
+    border-radius: .2em;
+    width: 5.4em;
+    border: .1em solid navy;
+    margin: 0 0 0 1em;
+}
+
+button:hover {
+    background-color: navy;
+    color: #FFF;
+    transition: background-color 2s;
+    transition-timing-function: cubic-bezier(.17, .67, .99, .61);
+    border: .1em solid navy;
+}
+
+button:focus {
+    background-color: navy;
+    color: #FFF;
+    transition: background-color 2s;
+    transition-timing-function: cubic-bezier(.17, .67, .99, .61);
+    border: .1em solid navy;
+}
+
+.search label {
+    display: none;
+}
+
+h1 {
+    margin: 0 .5em;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+                            /* Filter */
+
+.filter {
+    padding: .5em;
+    margin: .5em;
+}
+
+h3 {
+    margin: 0;
+    text-align: right;
+}
+
+.filter-choice {
+    display: none;
+    margin: .5em 0;
+    text-align: right;
+}
+
+                            /* Grid */
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+                          /* Project */
+
+article {
+    margin: .5em;
+}
+
+article:hover {
+    background-color: rgba(0, 0, 128, 0.4);
+    border: none;
+}
+
+article img {
+    width: 100%;
+}
+
+article h2 {
+    padding: 0 0.5em 0 0.5em;
+}
+
+article p {
+    padding: 0 1em 0 1em;
+}
+
+                            /* Footer */
+
+footer {
+    padding: 0 0 0 1em;
+    border-top: 1px dashed navy;
+}
+
+                            /* TABLET */
+
+@media only screen and (min-width: 27em) {
+
+    nav {
+        width: 100%;
+    }
+
+    li {
+        padding: 1em .5em;
+    }
+
+.filter-choice label {
+    display: block;
+    margin: .5em 0;
+    text-align: right;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+                        /* DESKTOP */
+
+@media only screen and (min-width: 48em) {
+
+    nav {
+        width: 100%;
+    }
+
+    li {
+        padding: 1em;
+        margin: 0 .1em;
+    }
+
+    .filter-choice label {
+    display: block;
+    margin: .5em 0;
+    text-align: right;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
